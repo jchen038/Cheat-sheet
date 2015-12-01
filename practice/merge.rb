@@ -6,7 +6,9 @@ class MergeTests < Test::Unit::TestCase
 		assert_equal mergeRec([5,7,79,9,3,47,6,54,1]), [1,3,5,6,7,9,47,54,79]
 	end
 
-
+	def testLoop
+		assert_equal mergeLoop([5,7,79,9,3,47,6,54,1]), [1,3,5,6,7,9,47,54,79]
+	end
 end
 
 def mergeRec(arr)
@@ -24,4 +26,8 @@ def mergeRec(arr)
 		p merge
 		return merge
 	end
+end
+
+def mergeLoop(arr) 
+
 end
