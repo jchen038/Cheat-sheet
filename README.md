@@ -11,7 +11,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 ## Useful Sites
 ### Domain
 
-[Google Domain](https://www.google.com/search?q=domain&gws_rd=ssl)
+[Google Domain](https://domains.google.com/about/)
 
 ### Articles
 
@@ -21,3 +21,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 [Include vs Extend](http://www.railstips.org/blog/archives/2009/05/15/include-vs-extend-in-ruby/)
 
+[Javascript Paradigm](https://www.quora.com/JavaScript-follows-which-Programming-Paradigm)
+
+[Javascript Closures](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work)
+  Simple Explaination(function within function)
