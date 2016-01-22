@@ -20,3 +20,12 @@ rbenv global 2.3.0
 
 gem install bundler
 gem install rails
+
+echo 'set number' >> ~/.vimrc
+
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+git config --global alias.aa "add --all"
+
+sudo add-apt-repository ppa:webupd8team/sublime-text-2
+sudo apt-get update
+sudo apt-get install sublime-text
