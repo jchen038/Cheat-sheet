@@ -11,13 +11,15 @@ echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
+
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 . ~/.zshrc
 
 sudo apt-get update
 sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
-
+sudo apt-get install postgresql-client
+sudo apt-get install postgresql postgresql-contrib libpq-dev 
 
 `#need to change version`
 rbenv install 2.3.0
