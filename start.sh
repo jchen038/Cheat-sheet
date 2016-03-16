@@ -21,6 +21,9 @@ sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libread
 sudo apt-get install postgresql-client
 sudo apt-get install postgresql postgresql-contrib libpq-dev 
 
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
 `#need to change version`
 rbenv install 2.3.0
 rbenv global 2.3.0
