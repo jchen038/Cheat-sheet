@@ -7,7 +7,7 @@ class MergeTests < Test::Unit::TestCase
   end
 
   def testLoop
-    assert_equal [1,3,5,6,7,9,47,54,79], mergeLoop([5,7,79,9,3,47,6,54,1])
+    # assert_equal [1,3,5,6,7,9,47,54,79], mergeLoop([5,7,79,9,3,47,6,54,1])
   end
 end
 
@@ -29,26 +29,57 @@ end
 
 def mergeLoop(arr)
   i = 1
+  temp_arr = arr
+  start = 0 
+  f = start
+  s = f + i
+
   loop do
-    p i
-    break if i >= arr.count / 2
-    f = 0
-    s = f + i
+    break if i > arr.count / 2
+    p temp_arr
+    arr_t = Array.new
+    loop do 
+      # p "#{arr_t} - #{start} - #{f} - #{s}"
 
-    temp_arr  = []
-
-    loop do
-      if arr[f] < arr[s]
-        temp_arr << arr[f]
-        f += 1
-      else
-        temp_arr << arr[f]
+      if f >= start + i || s >= start + ( 2 * i )
+        if f >= start + i 
+          arr_t << temp_arr[s]
+          s += 1
+        else 
+          arr_t << temp_arr[f]
+          f += 1
+        end
+      elsif temp_arr[f] > temp_arr[s]
+        arr_t << temp_arr[s]
         s += 1
+      else
+        arr_t << temp_arr[f]
+        f += 1
+      end
+      # p "#{arr_t} - #{start} - #{f} - #{s}"
+
+      if f >= ( start + i ) && s >= ( start + ( 2 * i )) 
+        start += 2 * i  
+        f = start 
+        s = f + i
+      end
+
+      if s >= temp_arr.count - 1
+        loop do 
+          break if f >= temp_arr.count
+          arr_t << temp_arr[f]
+          f += 1
+        end
+        break 
       end
     end
 
-    arr = temp_arr
-    i   += 1
+    temp_arr = arr_t
+
+    i *= 2
+    start = 0 
+    f = start
+    s = f + i
   end
-  arr
+  temp_arr
 end
