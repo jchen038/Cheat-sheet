@@ -1,6 +1,8 @@
 `# get oh my zsh`
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
 touch ~/.zshrc
 
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
