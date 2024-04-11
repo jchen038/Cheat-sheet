@@ -21,3 +21,5 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 [Ruby Weekly](http://rubyweekly.com/)
 
 
+### Mac OS Tools
+[rectangle](https://rectangleapp.com/)
